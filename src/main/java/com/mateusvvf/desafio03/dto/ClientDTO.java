@@ -2,6 +2,10 @@ package com.mateusvvf.desafio03.dto;
 
 import java.time.LocalDate;
 
+import org.springframework.beans.BeanUtils;
+
+import com.mateusvvf.desafio03.entities.Client;
+
 public class ClientDTO {
 	
 	
@@ -25,6 +29,11 @@ public class ClientDTO {
 		this.income = income;
 		this.birthDate = birthDate;
 		this.children = children;
+	}
+	
+	
+	public ClientDTO(Client client) {
+		BeanUtils.copyProperties(client, this);
 	}
 
 
