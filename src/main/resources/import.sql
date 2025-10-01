@@ -1,0 +1,15 @@
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Sherman Williams', '498.389.281-68', 6200.0, '1984-03-22', 2);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Amanda Smith', '742.184.776-42', 2100.0, '1997-01-14', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Alberto Martins', '142.980.443-81', 8500.0, '1970-07-27', 4);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Joseph Bing', '386.718.819-10', 1200.0, '1994-09-22', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Katherine Davies', '483.980.443-81', 3250.0, '1986-05-20', 1);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('James Ford', '481.516.234-20', 1080.0, '2004-09-22', 1);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Federico Huerta', '698.134.572-57', 5800.0, '1991-05-01', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Gwendolyn Cooper', '703.242.012-01', 7200.0, '1956-01-03', 3);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Alice Jones', '351.896.104-40', 5800.0, '1999-02-08', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Raymond Reyes', '492.684.305-23', 4000.0, '1989-12-15', 1);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('José Oliveira', '384.219.587-12', 3000.0, '1945-10-06', 5);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Pablo McCarthy', '601.493.785-65', 4900.0, '1979-04-30', 2);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Victoria Du Monreal', '735.204.168-30', 960.0, '2008-12-13', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Maximilian White', '487.653.091-22', 1800.0, '2006-07-22', 0);
+INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Akari Takahashi', '692.315.487-77', 6200.0, '1995-06-17', 1);
