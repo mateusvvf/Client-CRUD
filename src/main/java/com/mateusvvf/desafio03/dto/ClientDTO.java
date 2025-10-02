@@ -6,10 +6,14 @@ import org.springframework.beans.BeanUtils;
 
 import com.mateusvvf.desafio03.entities.Client;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class ClientDTO {
 	
 	
 	private Long id;
+	
+	@NotBlank(message = "Name cannot be blank.")
 	private String name;
 	private String cpf;
 	private Double income;

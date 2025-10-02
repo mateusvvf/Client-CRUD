@@ -11,6 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.mateusvvf.desafio03.dto.ClientDTO;
 import com.mateusvvf.desafio03.entities.Client;
 import com.mateusvvf.desafio03.repositories.ClientRepository;
+import com.mateusvvf.desafio03.services.exceptions.ResourceNotFoundException;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class ClientService {
@@ -22,7 +25,7 @@ public class ClientService {
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
 		Optional<Client> result = repository.findById(id);
-		Client client = result.get();
+		Client client = result.orElseThrow(() -> new ResourceNotFoundException("Resource not found"));
 		return new ClientDTO(client);
 	}
 	
@@ -45,16 +48,24 @@ public class ClientService {
 	
 	@Transactional
 	public ClientDTO update(Long id, ClientDTO dto) {
-		Client client = repository.getReferenceById(id);
-		copyDtoToEntity(dto, client);
-		client = repository.save(client);
-		return new ClientDTO(client);
+		try {
+			Client client = repository.getReferenceById(id);
+			copyDtoToEntity(dto, client);
+			client = repository.save(client);
+			return new ClientDTO(client);
+		}
+		catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundException("Resource not found");
+		}
 	}
 	
 	
 	@Transactional
 	public void delete(Long id) {
-		repository.deleteById(id);
+		if (!repository.existsById(id)) {
+			throw new ResourceNotFoundException("Resource not found");
+		}
+			repository.deleteById(id);
 	}
 	
 	
