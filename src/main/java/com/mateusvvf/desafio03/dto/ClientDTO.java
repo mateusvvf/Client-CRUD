@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import com.mateusvvf.desafio03.entities.Client;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 
 public class ClientDTO {
 	
@@ -15,9 +16,13 @@ public class ClientDTO {
 	
 	@NotBlank(message = "Name cannot be blank.")
 	private String name;
+	
 	private String cpf;
 	private Double income;
+	
+	@PastOrPresent(message = "Birth date cannot be a future date.")
 	private LocalDate birthDate;
+	
 	private Integer children;
 	
 	
